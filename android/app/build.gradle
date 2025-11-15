@@ -73,12 +73,6 @@ react {
     autolinkLibrariesWithApp()
 }
 
-// Fix for hermes version conflict on older react-native versions
-configurations.all {
-    resolutionStrategy {
-        missingDimensionStrategy 'com.facebook.react', 'reactNativeVersion', 'unspecified'
-    }
-}
 
 /**
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
