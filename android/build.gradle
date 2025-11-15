@@ -2,7 +2,7 @@
 ext {
     // Android (Compile/Target) SDK Version
     sdk_version = 36
-    minSdkVersion = 28
+    minSdkVersion = 23
     targetSdkVersion = 36
     compileSdkVersion = 36
 }
@@ -10,7 +10,7 @@ ext {
 buildscript {
     ext {
         buildToolsVersion = "36.0.0"
-        minSdkVersion = 28
+        minSdkVersion = 23
         compileSdkVersion = 36
         targetSdkVersion = 36
         ndkVersion = "27.1.12297006"
