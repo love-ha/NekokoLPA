@@ -233,11 +233,3 @@ dependencies {
 
 }
 
-// HACK: Override ReactAndroid's minSdkVersion to 23
-// This is to work around an issue in React Native 0.74+ where hermes requires API 24.
-// We need to support API 23 (Android 6), so we force the dependency to use it.
-afterEvaluate {
-    rootProject.findProject(":ReactAndroid")?.android?.defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-    }
-}
