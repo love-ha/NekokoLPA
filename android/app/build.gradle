@@ -73,6 +73,13 @@ react {
     autolinkLibrariesWithApp()
 }
 
+// Fix for hermes version conflict on older react-native versions
+configurations.all {
+    resolutionStrategy {
+        missingDimensionStrategy 'com.facebook.react', 'reactNativeVersion', 'unspecified'
+    }
+}
+
 /**
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
@@ -199,20 +206,20 @@ dependencies {
     // Preference
     implementation "androidx.preference:preference:1.2.1"
     // WorkManager
-    implementation "androidx.work:work-runtime:2.7.1"
+    implementation "androidx.work:work-runtime:2.9.1"
 
     // ---------------------------------------------------------------------------------------------
     // Lifecycle management
     // ---------------------------------------------------------------------------------------------
     // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.8.6"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6"
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.8.6"
     // Lifecycle runtime only (without ViewModel or LiveData)
-    implementation "androidx.lifecycle:lifecycle-runtime:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.8.6"
     // Saved state module for ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6"
     // Annotation processor
     implementation 'com.google.code.gson:gson:2.11.0'
     implementation 'com.google.android.datatransport:transport-api:3.2.0'
